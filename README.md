@@ -23,7 +23,7 @@ npm run preview  # 预览构建结果
 
 ## 📖 在线阅读
 
-访问 https://alanwhitedj.github.io/cpp-textbook/
+访问 https://alanwhitedj.github.io/noi_roadmap/
 
 ## 📄 许可证
 
