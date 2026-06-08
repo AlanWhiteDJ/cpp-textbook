@@ -1,57 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
   <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9D423"/>
-      <stop offset="50%" stop-color="#FF4E50"/>
-      <stop offset="100%" stop-color="#F9D423"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
     </linearGradient>
-    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C62828"/>
-      <stop offset="100%" stop-color="#E53935"/>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="30%" stop-color="#FFD700"/>
+      <stop offset="60%" stop-color="#FFB800"/>
+      <stop offset="100%" stop-color="#FF9500"/>
     </linearGradient>
-    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a2332"/>
-      <stop offset="100%" stop-color="#2d3a4f"/>
+    <linearGradient id="trophyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE55C"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
     </linearGradient>
-    <linearGradient id="medal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFD700"/>
-      <stop offset="40%" stop-color="#FFA000"/>
-      <stop offset="100%" stop-color="#FF6F00"/>
+    <linearGradient id="ribbonGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="50%" stop-color="#FF4757"/>
+      <stop offset="100%" stop-color="#FF6B6B"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB300"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <!-- 背景圆 -->
-  <circle cx="200" cy="175" r="155" fill="url(#shield)" opacity="0.95"/>
-  <circle cx="200" cy="175" r="155" stroke="url(#gold)" stroke-width="4" fill="none"/>
+  <!-- 温暖背景圆 -->
+  <circle cx="200" cy="170" r="160" fill="url(#bgGrad)" opacity="0.95"/>
+  <circle cx="200" cy="170" r="160" stroke="url(#goldGrad)" stroke-width="4" fill="none"/>
+  <circle cx="200" cy="170" r="152" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none"/>
 
-  <!-- 金牌 -->
-  <circle cx="200" cy="180" r="58" fill="url(#medal)" opacity="0.9"/>
-  <circle cx="200" cy="180" r="52" fill="none" stroke="#FFF" stroke-width="1.5" opacity="0.4"/>
-  <circle cx="200" cy="180" r="43" fill="none" stroke="#FFF" stroke-width="1" opacity="0.25"/>
+  <!-- 奖杯底座 -->
+  <rect x="175" y="218" width="50" height="12" rx="3" fill="url(#trophyGrad)" opacity="0.9"/>
+  <rect x="185" y="228" width="30" height="8" rx="2" fill="url(#trophyGrad)" opacity="0.75"/>
 
-  <!-- 奖牌数字 1 -->
-  <text x="200" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="52" font-weight="900" fill="#FFF" opacity="0.9">1</text>
+  <!-- 奖杯主体 -->
+  <path d="M170 185 C165 155, 155 140, 170 130 C185 120, 185 130, 200 130 C215 130, 215 120, 230 130 C245 140, 235 155, 230 185 L230 218 L170 218 Z" fill="url(#trophyGrad)" opacity="0.9"/>
+  <path d="M170 185 C165 155, 155 140, 170 130 C185 120, 185 130, 200 130 C215 130, 215 120, 230 130 C245 140, 235 155, 230 185" fill="none" stroke="#FFF" stroke-width="1.5" opacity="0.3"/>
 
-  <!-- 星星 -->
-  <text x="130" y="145" font-size="24" fill="#FFD700" opacity="0.8" filter="url(#glow)">✦</text>
-  <text x="270" y="145" font-size="18" fill="#FFD700" opacity="0.6">✦</text>
-  <text x="150" y="240" font-size="14" fill="#FFD700" opacity="0.5">✦</text>
-  <text x="250" y="240" font-size="16" fill="#FFD700" opacity="0.5">✦</text>
+  <!-- 奖杯把手 -->
+  <path d="M170 160 C155 165, 150 185, 170 195" fill="none" stroke="url(#trophyGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <path d="M230 160 C245 165, 250 185, 230 195" fill="none" stroke="url(#trophyGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- 奖杯上的星星 -->
+  <text x="200" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#FFF" opacity="0.9" filter="url(#glow)">★</text>
+
+  <!-- 环绕星星 -->
+  <text x="105" y="160" font-size="18" fill="#FFE55C" opacity="0.9" filter="url(#glow)">✦</text>
+  <text x="295" y="160" font-size="18" fill="#FFE55C" opacity="0.9" filter="url(#glow)">✦</text>
+  <text x="95" y="200" font-size="12" fill="#FFD700" opacity="0.7" filter="url(#glow)">✦</text>
+  <text x="305" y="200" font-size="12" fill="#FFD700" opacity="0.7" filter="url(#glow)">✦</text>
+  <text x="140" y="120" font-size="14" fill="#FFF" opacity="0.6" filter="url(#glow)">✦</text>
+  <text x="260" y="120" font-size="14" fill="#FFF" opacity="0.6" filter="url(#glow)">✦</text>
 
   <!-- 主标题：元佳信奥 -->
-  <text x="200" y="80" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif" font-size="42" font-weight="900" fill="url(#gold)" letter-spacing="6">元佳信奥</text>
+  <text x="200" y="60" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','SimHei',sans-serif" font-size="40" font-weight="900" fill="url(#titleGrad)" letter-spacing="8" filter="url(#bigGlow)">元佳信奥</text>
 
-  <!-- 副标题：每个孩子都是金牌 -->
-  <text x="200" y="270" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="17" fill="#8899AA" letter-spacing="2">每个孩子都是金牌</text>
+  <!-- 副标题：每一个孩子都是冠军 -->
+  <text x="200" y="275" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="16" fill="#FFE082" letter-spacing="3" opacity="0.9">每一个孩子都是冠军</text>
 
-  <!-- 底部装饰线 -->
-  <line x1="110" y1="290" x2="290" y2="290" stroke="url(#gold)" stroke-width="1.5" opacity="0.4"/>
+  <!-- 底部装饰 -->
+  <line x1="100" y1="295" x2="300" y2="295" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4"/>
 
   <!-- 代码括号装饰 -->
-  <text x="58" y="195" font-family="'Courier New',monospace" font-size="38" fill="#FFD700" opacity="0.25">{</text>
-  <text x="338" y="195" font-family="'Courier New',monospace" font-size="38" fill="#FFD700" opacity="0.25">}</text>
+  <text x="52" y="185" font-family="'Courier New',monospace" font-size="36" fill="#FFF" opacity="0.18">{</text>
+  <text x="344" y="185" font-family="'Courier New',monospace" font-size="36" fill="#FFF" opacity="0.18">}</text>
+
+  <!-- 小点缀 -->
+  <circle cx="65" cy="100" r="3" fill="#FFE55C" opacity="0.5"/>
+  <circle cx="335" cy="100" r="3" fill="#FFE55C" opacity="0.5"/>
+  <circle cx="80" cy="300" r="2.5" fill="#FFE55C" opacity="0.4"/>
+  <circle cx="320" cy="300" r="2.5" fill="#FFE55C" opacity="0.4"/>
 </svg>
