@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // 侧边栏章节列表
 const sidebarGuide = [
@@ -108,7 +109,8 @@ const sidebarGuide = [
   },
 ]
 
-export default defineConfig({
+export default withMermaid(
+  defineConfig({
   title: '信息学竞赛 C++ 教材',
   description: '面向小学高年级+初中低年级的信息学竞赛 C++ 教材 | CSP-J 第二轮 | GESP 1-5级',
   lang: 'zh-CN',
@@ -196,3 +198,4 @@ export default defineConfig({
     lineNumbers: true,
   },
 })
+)

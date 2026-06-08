@@ -13,7 +13,7 @@ hero:
       text: 模块导航
       link: /#模块导航
   image:
-    src: /cpp-textbook/logo.svg
+    src: /noi_roadmap/logo.svg
     alt: Logo
 
 features:
