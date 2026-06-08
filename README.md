@@ -2,7 +2,7 @@
 
 > 🏆 面向小学高年级 + 初中低年级 | 对标 NOI 2025 入门级 + GESP 1-5 级
 
-基于 [VitePress](https://vitepress.dev/) 构建的 OI Wiki 风格在线教材。
+基于 [VitePress](https://vitepress.dev/) 构建的在线教材。
 
 ## 📚 内容
 

@@ -1,4 +1,4 @@
-// build_site.js - 构建 OI Wiki 风格站点
+// build_site.js - 构建在线教材站点
 const fs = require('fs');
 const path = require('path');
 
