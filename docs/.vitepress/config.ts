@@ -117,11 +117,11 @@ export default withMermaid(
   base: '/noi_roadmap/',
 
   head: [
-    ['link', { rel: 'icon', href: '/noi_roadmap/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
   themeConfig: {
-    logo: '/noi_roadmap/logo.svg',
+    logo: '/logo.svg',
     nav: [
       { text: '首页', link: '/' },
       { text: '上册 · 入门级', link: '/m1/第01章_你好计算机' },
